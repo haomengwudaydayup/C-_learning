@@ -1,0 +1,35 @@
+#pragma once
+#include<string>
+#include<iostream>
+
+using namespace std;
+
+class LandOwnerV4
+{
+	//默认为私有属性，创建私有属性在开头加下划线，规范编程
+	string _name;
+	//int score;
+	int _score;//私有属性
+	int _crads[20];//私有属性
+
+public:
+
+
+	
+	LandOwnerV4();//构造函数
+	~LandOwnerV4();//析构函数
+
+	void TouchCards();//声明摸牌方法
+	void showscore();//声明的显示积分方法
+
+	//使用一个方法来封装以避免传递参数score<0
+	void Setscore(int);//但这个封装在类内部实现了，不是很理解，所以我们在这里声明
+	//方法就是函数，c++语言封装就是函数封装，在类或者是类（.h .hpp）的类的实现（.cpp)实现都可以
+	//但是在类中实现的话，代码量不要太高，在类的实现中实现的话，要在类中进行声明。
+	//在类和类的实现两个文件中两个不可分离的，两者公用类中定义成员变量和成员函数
+	//:: 叫做作用域解析运算符
+    
+	void Setname(string);//
+	string Getname(void);//
+};
+
